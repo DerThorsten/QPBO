@@ -22,6 +22,8 @@
 #include <stdio.h>
 #include "QPBO.h"
 
+#include "instances.inc"
+
 namespace qpbo{
 
 #define INFINITE_D ((int)(((unsigned)-1)/2))		/* infinite distance to the terminal */
@@ -723,4 +725,3 @@ template <typename REAL>
 	}
 }
 }
-#include "instances.inc"

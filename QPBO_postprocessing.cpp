@@ -23,6 +23,11 @@
 #include <stdlib.h>
 #include <string.h>
 #include "QPBO.h"
+
+#include "instances.inc"
+
+
+
 namespace qpbo{
 
 template <typename REAL>
@@ -186,4 +191,3 @@ template <typename REAL>
 	ComputeWeakPersistencies();
 }
 }
-#include "instances.inc"

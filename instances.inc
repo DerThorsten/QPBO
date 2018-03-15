@@ -7,6 +7,8 @@
 // Instantiations
 namespace qpbo{
 
+template <typename REAL> class QPBO;
+
 template class QPBO<int>;
 template class QPBO<float>;
 template class QPBO<double>;
