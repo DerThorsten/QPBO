@@ -25,6 +25,7 @@ set(QPBO_SRC_FILES
     QPBO.cpp
     QPBO_maxflow.cpp
     QPBO_postprocessing.cpp
+    instances.inc
 )
 
 set(QPBO_HEADERS
