@@ -12,23 +12,12 @@ ENDIF()
 
 set(${PROJECT_NAME}_VERSION_MAJOR 1)
 set(${PROJECT_NAME}_VERSION_MINOR 4)
-set(${PROJECT_NAME}_VERSION_PATCH 1)
+set(${PROJECT_NAME}_VERSION_PATCH 2)
 
 
 set(${PROJECT_NAME}_VERSION 
     ${${PROJECT_NAME}_VERSION_MAJOR}.${${PROJECT_NAME}_VERSION_MINOR}.${${PROJECT_NAME}_VERSION_PATCH}
 )
-
-
-set(QPBO_SRC_FILES
-    QPBO_extra.cpp
-    QPBO.cpp
-    QPBO_maxflow.cpp
-    QPBO_postprocessing.cpp
-    instances.inc
-)
-
-
 
 
 
@@ -39,18 +28,6 @@ ADD_LIBRARY(qpbo SHARED ${QPBO_SRC_FILES})
 include(GNUInstallDirs)
 include(CMakePackageConfigHelpers)
 
-# install(TARGETS qpbo
-#     RUNTIME DESTINATION bin         COMPONENT libraries
-#     LIBRARY DESTINATION lib         COMPONENT libraries
-#     ARCHIVE DESTINATION lib/static  COMPONENT libraries)
-
-# install (TARGETS qpbo
-#         ARCHIVE DESTINATION lib
-#         LIBRARY DESTINATION lib
-#         RUNTIME DESTINATION bin)
-
-install(TARGETS qpbo 
-    DESTINATION ${CMAKE_INSTALL_LIBDIR})
 
 install(FILES include/qpbo/qpbo.hpp
         DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/qpbo)
