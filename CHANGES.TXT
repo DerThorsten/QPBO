@@ -1,3 +1,5 @@
+QPBO, version 1.4.1 => header only
+
 QPBO, version 1.4.
 
 Changes from version 1.32:

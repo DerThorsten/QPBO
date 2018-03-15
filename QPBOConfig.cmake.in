@@ -3,19 +3,15 @@
 #
 #   QPBO_FOUND - true if QPBO found on the system
 #   QPBO_INCLUDE_DIRS - the directory containing QPBO headers
-#   QPBO_LIBRARY - the qpbo library
+#   QPBO_LIBRARY - empty
 
 @PACKAGE_INIT@
 
 set(PN QPBO)
 
-FIND_LIBRARY(${PN}_LIBRARY qpbo
-    PATHS ${PACKAGE_PREFIX_DIR}/@CMAKE_INSTALL_LIBDIR@
-    NO_DEFAULT_PATH
-)
 
 set_and_check(${PN}_INCLUDE_DIR "${PACKAGE_PREFIX_DIR}/@CMAKE_INSTALL_INCLUDEDIR@")
 set_and_check(${PN}_INCLUDE_DIRS "${PACKAGE_PREFIX_DIR}/@CMAKE_INSTALL_INCLUDEDIR@")
-set_and_check(${PN}_LIBRARY      ${${PN}_LIBRARY})
-set_and_check(${PN}_LIBRARIES      ${${PN}_LIBRARY})
+set_and_check(${PN}_LIBRARY      "")
+set_and_check(${PN}_LIBRARIES      "")
 check_required_components(${PN})

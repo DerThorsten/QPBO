@@ -10,9 +10,9 @@ ELSE()
 ENDIF()
 
 
-set(${PROJECT_NAME}_VERSION_MAJOR 0)
-set(${PROJECT_NAME}_VERSION_MINOR 3)
-set(${PROJECT_NAME}_VERSION_PATCH 11)
+set(${PROJECT_NAME}_VERSION_MAJOR 1)
+set(${PROJECT_NAME}_VERSION_MINOR 4)
+set(${PROJECT_NAME}_VERSION_PATCH 1)
 
 
 set(${PROJECT_NAME}_VERSION 
@@ -28,10 +28,7 @@ set(QPBO_SRC_FILES
     instances.inc
 )
 
-set(QPBO_HEADERS
-    QPBO.h
-    block.h
-)
+
 
 
 
@@ -55,7 +52,7 @@ include(CMakePackageConfigHelpers)
 install(TARGETS qpbo 
     DESTINATION ${CMAKE_INSTALL_LIBDIR})
 
-install(FILES ${QPBO_HEADERS}
+install(FILES include/qpbo/qpbo.hpp
         DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/qpbo)
 
 
