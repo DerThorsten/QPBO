@@ -12,6 +12,6 @@ set(PN QPBO)
 
 set_and_check(${PN}_INCLUDE_DIR "${PACKAGE_PREFIX_DIR}/@CMAKE_INSTALL_INCLUDEDIR@")
 set_and_check(${PN}_INCLUDE_DIRS "${PACKAGE_PREFIX_DIR}/@CMAKE_INSTALL_INCLUDEDIR@")
-set_and_check(${PN}_LIBRARY      "")
-set_and_check(${PN}_LIBRARIES      "")
+set(${PN}_LIBRARY      "")
+set(${PN}_LIBRARIES      "")
 check_required_components(${PN})
